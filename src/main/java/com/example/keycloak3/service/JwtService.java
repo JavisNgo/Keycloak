@@ -31,7 +31,7 @@ public class JwtService {
         return false;
     }
 
-    public String extractUsername(@NonNull HttpServletRequest request) {
+    public String extractUserEmail(@NonNull HttpServletRequest request) {
         String authHeader = request.getHeader("Authorization");
         if(authHeader == null || !authHeader.startsWith("Bearer ")) {
             throw new AccessDeniedException("Access denied.");

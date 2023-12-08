@@ -16,7 +16,7 @@ public class TenantController {
     @Autowired
     JwtService jwtService;
 
-    @GetMapping(value = "/demo")
+    @GetMapping()
     public ResponseEntity<?> keycloakDemo4(@NonNull HttpServletRequest request) {
         boolean flag = jwtService.isTenant(request);
         if(!flag) {

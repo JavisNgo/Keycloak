@@ -14,19 +14,16 @@ public class AuthController {
     private final UserService userService;
 
     @GetMapping (value = "/admin")
-    //@PreAuthorize("hasRole('admin')")
     public ResponseEntity<?> keycloakDemo2() {
         return ResponseEntity.ok("Ta là administrator" );
     }
 
     @GetMapping (value = "/manager")
-    //@PreAuthorize("hasRole('manager')")
     public ResponseEntity<String> keycloakDemo1() {
         return ResponseEntity.ok("Ta là manager");
     }
 
     @GetMapping (value = "/staff")
-    //@PreAuthorize("hasRole('staff')")
     public ResponseEntity<String> keycloakDemo3() {
         return ResponseEntity.ok("Ta là staff");
     }

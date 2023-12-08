@@ -27,7 +27,7 @@ public class JwtFilter extends OncePerRequestFilter {
             @NonNull HttpServletResponse response,
             @NonNull FilterChain filterChain) throws ServletException, IOException {
         boolean check = jwtService.isTenant(request);
-        String jwtUserEmail = jwtService.extractUsername(request);
+        String jwtUserEmail = jwtService.extractUserEmail(request);
         UserDetails userDetails = userDetailsService.loadUserByUsername(jwtUserEmail);
         if (check && userDetails != null) {
             filterChain.doFilter(request,response);

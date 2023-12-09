@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Keycloak3</artifactId>
+    <artifactId>ducnt-spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Keycloak3</name>
-    <description>Keycloak3</description>
+    <name>ducnt-spring</name>
+    <description>Demo project for Keycloak</description>
     <properties>
         <java.version>17</java.version>
         <spring-security>6.1.2</spring-security>
